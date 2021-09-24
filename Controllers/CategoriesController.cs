@@ -25,7 +25,9 @@ namespace IndecisiveApp.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
-            return await _context.Categories.ToListAsync();
+            return await _context.Categories
+                .Include(c => c.Items)
+                .ToListAsync();
         }
 
         // GET: api/Categories/5
