@@ -12,3 +12,17 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.card-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-header .btn {
+  margin-left: auto;
+}
+
+.card {
+  margin-bottom: 25px;
+}
